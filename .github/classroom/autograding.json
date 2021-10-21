@@ -1,0 +1,304 @@
+{
+  "tests": [
+    {
+      "name": "sumToString(a,b) from mild_1",
+      "setup": "npm install --silent esm",
+      "run": "node --experimental-modules --input-type=module --eval \"import {sumToString} from './src/mild/mild_1.js'; console.log(sumToString(13,7));\"",
+      "input": "",
+      "output": "13 + 7 = 20",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "getIncreasingArray(startNumber, endNumber) from milld_1",
+      "setup": "npm install --silent esm",
+      "run": "node --experimental-modules --input-type=module --eval \"import {getIncreasingArray} from './src/mild/mild_1.js'; console.log(getIncreasingArray(13,22));\"",
+      "input": "",
+      "output": "[\r\n  13, 14, 15, 16, 17,\r\n  18, 19, 20, 21, 22\r\n]",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "maxAndMin(numbers) from mild_1",
+      "setup": "npm install --silent esm",
+      "run": "node --experimental-modules --input-type=module --eval \"import {maxAndMin} from './src/mild/mild_1.js'; console.log(maxAndMin('41847923'));\"",
+      "input": "",
+      "output": "{ max: 9, min: 1 }",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "countArray(array) from mild_1",
+      "setup": "npm install --silent esm",
+      "run": "node --experimental-modules --input-type=module --eval \"import {countArray} from './src/mild/mild_1.js'; console.log(countArray([ 13, 14, 16, 16, 17, 18, 16, 14, 21, 13 ]));\"",
+      "input": "",
+      "output": "{ '13': 2, '14': 2, '16': 3, '17': 1, '18': 1, '21': 1 }",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "identifyVariable(variable) from mild_2",
+      "setup": "npm install esm",
+      "run": "echo \"import {identifyVariable} from './src/mild/mild_2.js'; console.log(identifyVariable('purple'));\" | node -r esm --",
+      "input": "",
+      "output": "{ type: 'string', value: 'purple' }",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "identifyArray(array) from mild_2",
+      "setup": "npm install esm",
+      "run": "echo \"import {identifyArray} from './src/mild/mild_2.js'; console.log(identifyArray([ 13, 14, 16, 16, 17, 18, 16, 14, 21, 13 ]));\" | node -r esm --",
+      "input": "",
+      "output": "[ { type: 'number', value: 13 },\r\n  { type: 'number', value: 14 },\r\n  { type: 'number', value: 16 },\r\n  { type: 'number', value: 16 },\r\n  { type: 'number', value: 17 },\r\n  { type: 'number', value: 18 },\r\n  { type: 'number', value: 16 },\r\n  { type: 'number', value: 14 },\r\n  { type: 'number', value: 21 },\r\n  { type: 'number', value: 13 } ]",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "removeKey(object, key) from mild_2",
+      "setup": "npm install esm",
+      "run": "echo \"import {removeKey} from './src/mild/mild_2.js'; let idrecord = { name: 'John Martin', title: 'Instructor', age: 41, password: 'supersecretpassword' }; removeKey(idrecord, 'password'); console.log(idrecord);\" | node -r esm --",
+      "input": "",
+      "output": "{ name: 'John Martin', title: 'Instructor', age: 41 }",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "removeKeyNonDestructive(object, key) from mild_2",
+      "setup": "npm install esm",
+      "run": "echo \"import {removeKeyNonDestructive} from './src/mild/mild_2.js'; let idrecord = { name: 'John Martin', title: 'Instructor', age: 41, password: 'supersecretpassword' }; newrecord = removeKeyNonDestructive(idrecord, 'age'); console.log(newrecord);\" | node -r esm --",
+      "input": "",
+      "output": "{ name: 'John Martin',\r\n  title: 'Instructor',\r\n  age: 41,\r\n  password: 'supersecretpassword' }\r\n{ name: 'John Martin',\r\n  title: 'Instructor',\r\n  password: 'supersecretpassword' }",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "removeKeys(object, keyList) from mild_2",
+      "setup": "npm install esm",
+      "run": "echo \"import {removeKeys} from './src/mild/mild_2.js'; let idrecord = { name: 'John Martin', title: 'Instructor', age: 41, password: 'supersecretpassword' }; newrecord = removeKeys(idrecord, [ 'age', 'password' ]); console.log(idrecord); console.log(newrecord);\" | node -r esm --",
+      "input": "",
+      "output": "{ name: 'John Martin',\r\n  title: 'Instructor',\r\n  age: 41,\r\n  password: 'supersecretpassword' }\r\n{ name: 'John Martin', title: 'Instructor' }",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "getSum(array) from medium_1",
+      "setup": "npm install esm",
+      "run": "echo \"import {getSum} from './src/medium/medium_1.js'; console.log(getSum([14,8,5,7,7,5,2,7,5,3,47,9]));\" | node -r esm --",
+      "input": "",
+      "output": "119",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "getMedian(array) from medium_1",
+      "setup": "npm install esm",
+      "run": "echo \"import {getMedian} from './src/medium/medium_1.js'; console.log(getMedian([14,8,5,7,7,5,2,7,5,3,47,9]));\" | node -r esm --",
+      "input": "",
+      "output": "7",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "getStatistics(array) from medium_1",
+      "setup": "npm install esm",
+      "run": "echo \"import {getStatistics} from './src/medium/medium_1.js'; console.log(getStatistics([14,8,5,7,7,5,2,7,5,3,47,9]));\" | node -r esm --",
+      "input": "",
+      "output": "{ length: 12,\r\n  sum: 119,\r\n  mean: 9.916666666666666,\r\n  median: 7,\r\n  min: 2,\r\n  max: 47,\r\n  variance: 133.74305555555557,\r\n  standard_deviation: 11.564733267808453 }",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "allCarStats from medium_2",
+      "setup": "npm install esm",
+      "run": "echo \"import {allCarStats} from './src/medium/medium_2.js'; console.log(allCarStats);\" | node -r esm --",
+      "input": "",
+      "output": "{ avgMpg: { city: 17.275807722616232, highway: 24.125492513790388 },\r\n  allYearStats:\r\n   { length: 5076,\r\n     sum: 10207164,\r\n     mean: 2010.8676122931442,\r\n     median: 2011,\r\n     min: 2009,\r\n     max: 2012,\r\n     variance: 0.6128911467677238,\r\n     standard_deviation: 0.7828736467449418 },\r\n  ratioHybrids: 0.012411347517730497 }",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 4
+    },
+    {
+      "name": "moreStats from medium_2",
+      "setup": "npm install esm",
+      "run": "echo \"import {moreStats} from './src/medium/medium_2.js'; console.log(moreStats.avgMpgByYearAndHybrid);\" | node -r esm --",
+      "input": "",
+      "output": "{ '2009':\r\n   { hybrid: { city: 20.5, highway: 21 },\r\n     notHybrid: { city: 17.622222222222224, highway: 24.6 } },\r\n  '2010':\r\n   { hybrid: { city: 21.055555555555557, highway: 22.72222222222222 },\r\n     notHybrid: { city: 16.970073404856013, highway: 23.619424054206664 } },\r\n  '2011':\r\n   { hybrid: { city: 21.692307692307693, highway: 33.23076923076923 },\r\n     notHybrid: { city: 16.8292438657987, highway: 23.479218828242363 } },\r\n  '2012':\r\n   { hybrid: { city: 23.066666666666666, highway: 29.066666666666666 },\r\n     notHybrid: { city: 18.221666666666668, highway: 25.7025 } } }",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 4
+    },
+    {
+      "name": "searchHighPower(car_data, minHorsepower, minTorque) from medium_3",
+      "setup": "",
+      "run": "clear",
+      "input": "",
+      "output": "F",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "searchMpg(car_data, minCity, minHighway) from medium_3",
+      "setup": "",
+      "run": "clear",
+      "input": "",
+      "output": "F",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "searchMpg(car_data, minCity, minHighway) from medium_3",
+      "setup": "",
+      "run": "clear",
+      "input": "",
+      "output": "F",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "searchByYear(car_data, years) from medium_3",
+      "setup": "",
+      "run": "clear",
+      "input": "",
+      "output": "F",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "repeat from spicy_9",
+      "setup": "",
+      "run": "clear",
+      "input": "",
+      "output": "F",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 4
+    },
+    {
+      "name": "repeatDemo from spicy_9",
+      "setup": "",
+      "run": "clear",
+      "input": "",
+      "output": "F",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 4
+    },
+    {
+      "name": "multiplyBy from spicy_9",
+      "setup": "",
+      "run": "clear",
+      "input": "",
+      "output": "F",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 4
+    },
+    {
+      "name": "multiplyBy from spicy_9",
+      "setup": "",
+      "run": "clear",
+      "input": "",
+      "output": "F",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 4
+    },
+    {
+      "name": " tenTimes from spicy_9",
+      "setup": "",
+      "run": "clear",
+      "input": "",
+      "output": "F",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 4
+    },
+    {
+      "name": "tenTimesFifty from spicy_9",
+      "setup": "",
+      "run": "clear",
+      "input": "",
+      "output": "F",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 4
+    },
+    {
+      "name": "everyEven from spicy_9",
+      "setup": "",
+      "run": "clear",
+      "input": "",
+      "output": "F",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 4
+    },
+    {
+      "name": "someEven from spicy_9",
+      "setup": "",
+      "run": "clear",
+      "input": "",
+      "output": "F",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 4
+    },
+    {
+      "name": "filter from spicy_9",
+      "setup": "",
+      "run": "clear",
+      "input": "",
+      "output": "F",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 4
+    },
+    {
+      "name": "allEvensAreOdd from spicy_9",
+      "setup": "",
+      "run": "clear",
+      "input": "",
+      "output": "F",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 4
+    },
+    {
+      "name": "anEvenIsOdd from spicy_9",
+      "setup": "",
+      "run": "clear",
+      "input": "",
+      "output": "F",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 4
+    },
+    {
+      "name": "hasExactly from spicy_9",
+      "setup": "",
+      "run": "clear",
+      "input": "",
+      "output": "F",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 4
+    }
+  ]
+}
