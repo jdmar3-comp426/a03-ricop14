@@ -299,6 +299,16 @@
       "comparison": "exact",
       "timeout": 10,
       "points": 4
+    },
+    {
+      "name": "Node Version",
+      "setup": "",
+      "run": "node -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
     }
   ]
 }
