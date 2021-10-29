@@ -2,7 +2,7 @@
   "tests": [
     {
       "name": "sumToString(a,b) from mild_1",
-      "setup": "npm install --silent esm",
+      "setup": "",
       "run": "node --experimental-modules --input-type=module --eval \"import {sumToString} from './src/mild/mild_1.js'; console.log(sumToString(13,7));\"",
       "input": "",
       "output": "13 + 7 = 20",
@@ -12,7 +12,7 @@
     },
     {
       "name": "getIncreasingArray(startNumber, endNumber) from milld_1",
-      "setup": "npm install --silent esm",
+      "setup": "",
       "run": "node --experimental-modules --input-type=module --eval \"import {getIncreasingArray} from './src/mild/mild_1.js'; console.log(getIncreasingArray(13,22));\"",
       "input": "",
       "output": "[\r\n  13, 14, 15, 16, 17,\r\n  18, 19, 20, 21, 22\r\n]",
@@ -22,7 +22,7 @@
     },
     {
       "name": "maxAndMin(numbers) from mild_1",
-      "setup": "npm install --silent esm",
+      "setup": "",
       "run": "node --experimental-modules --input-type=module --eval \"import {maxAndMin} from './src/mild/mild_1.js'; console.log(maxAndMin('41847923'));\"",
       "input": "",
       "output": "{ max: 9, min: 1 }",
@@ -32,7 +32,7 @@
     },
     {
       "name": "countArray(array) from mild_1",
-      "setup": "npm install --silent esm",
+      "setup": "",
       "run": "node --experimental-modules --input-type=module --eval \"import {countArray} from './src/mild/mild_1.js'; console.log(countArray([ 13, 14, 16, 16, 17, 18, 16, 14, 21, 13 ]));\"",
       "input": "",
       "output": "{ '13': 2, '14': 2, '16': 3, '17': 1, '18': 1, '21': 1 }",
@@ -42,18 +42,18 @@
     },
     {
       "name": "identifyVariable(variable) from mild_2",
-      "setup": "npm install --silent esm",
-      "run": "node -r esm --eval \"import {identifyVariable} from './src/mild/mild_2.js'; console.log(identifyVariable('purple'));\"",
+      "setup": "",
+      "run": "node --experimental-modules --input-type=module --eval \"import {identifyVariable} from './src/mild/mild_2.js'; console.log(identifyVariable('purple'));\"",
       "input": "",
       "output": "{ type: 'string', value: 'purple' }",
-      "comparison": "exact",
+      "comparison": "included",
       "timeout": 10,
       "points": 3
     },
     {
       "name": "identifyArray(array) from mild_2",
-      "setup": "npm install --silent esm",
-      "run": "node -r esm --eval \"import {identifyArray} from './src/mild/mild_2.js'; console.log(identifyArray([ 13, 14, 16, 16, 17, 18, 16, 14, 21, 13 ]));\"",
+      "setup": "",
+      "run": "node --experimental-modules --input-type=module --eval \"import {identifyArray} from './src/mild/mild_2.js'; console.log(identifyArray([ 13, 14, 16, 16, 17, 18, 16, 14, 21, 13 ]));\"",
       "input": "",
       "output": "[ { type: 'number', value: 13 },\r\n  { type: 'number', value: 14 },\r\n  { type: 'number', value: 16 },\r\n  { type: 'number', value: 16 },\r\n  { type: 'number', value: 17 },\r\n  { type: 'number', value: 18 },\r\n  { type: 'number', value: 16 },\r\n  { type: 'number', value: 14 },\r\n  { type: 'number', value: 21 },\r\n  { type: 'number', value: 13 } ]",
       "comparison": "exact",
@@ -62,8 +62,8 @@
     },
     {
       "name": "removeKey(object, key) from mild_2",
-      "setup": "npm install --silent esm",
-      "run": "node -r esm --eval \"import {removeKey} from './src/mild/mild_2.js'; let idrecord = { name: 'John Martin', title: 'Instructor', age: 41, password: 'supersecretpassword' }; removeKey(idrecord, 'password'); console.log(idrecord);\"",
+      "setup": "",
+      "run": "node --experimental-modules --input-type=module --eval \"import {removeKey} from './src/mild/mild_2.js'; let idrecord = { name: 'John Martin', title: 'Instructor', age: 41, password: 'supersecretpassword' }; removeKey(idrecord, 'password'); console.log(idrecord);\"",
       "input": "",
       "output": "{ name: 'John Martin', title: 'Instructor', age: 41 }",
       "comparison": "exact",
@@ -72,8 +72,8 @@
     },
     {
       "name": "removeKeyNonDestructive(object, key) from mild_2",
-      "setup": "npm install --silent esm",
-      "run": "node -r esm --eval \"import {removeKeyNonDestructive} from './src/mild/mild_2.js'; let idrecord = { name: 'John Martin', title: 'Instructor', age: 41, password: 'supersecretpassword' }; newrecord = removeKeyNonDestructive(idrecord, 'age'); console.log(newrecord);\"",
+      "setup": "",
+      "run": "node --experimental-modules --input-type=module --eval \"import {removeKeyNonDestructive} from './src/mild/mild_2.js'; let idrecord = { name: 'John Martin', title: 'Instructor', age: 41, password: 'supersecretpassword' }; newrecord = removeKeyNonDestructive(idrecord, 'age'); console.log(idrecord); console.log(newrecord);\"",
       "input": "",
       "output": "{ name: 'John Martin',\r\n  title: 'Instructor',\r\n  age: 41,\r\n  password: 'supersecretpassword' }\r\n{ name: 'John Martin',\r\n  title: 'Instructor',\r\n  password: 'supersecretpassword' }",
       "comparison": "exact",
@@ -82,8 +82,8 @@
     },
     {
       "name": "removeKeys(object, keyList) from mild_2",
-      "setup": "npm install --silent esm",
-      "run": "node -r esm --eval \"import {removeKeys} from './src/mild/mild_2.js'; let idrecord = { name: 'John Martin', title: 'Instructor', age: 41, password: 'supersecretpassword' }; newrecord = removeKeys(idrecord, [ 'age', 'password' ]); console.log(idrecord); console.log(newrecord);\"",
+      "setup": "",
+      "run": "node --experimental-modules --input-type=module --eval \"import {removeKeys} from './src/mild/mild_2.js'; let idrecord = { name: 'John Martin', title: 'Instructor', age: 41, password: 'supersecretpassword' }; newrecord = removeKeys(idrecord, [ 'age', 'password' ]); console.log(idrecord); console.log(newrecord);\"",
       "input": "",
       "output": "{ name: 'John Martin',\r\n  title: 'Instructor',\r\n  age: 41,\r\n  password: 'supersecretpassword' }\r\n{ name: 'John Martin', title: 'Instructor' }",
       "comparison": "exact",
