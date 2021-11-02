@@ -176,7 +176,7 @@
       "run": "node --experimental-modules --input-type=module --eval \"import car_data from './src/medium/data/mpg_data.js'; import {searchByYear} from './src/medium/medium_3.js'; console.log(searchByYear(car_data, [ 2016, 2018 ]));\"",
       "input": "",
       "output": "[]",
-      "comparison": "exact",
+      "comparison": "included",
       "timeout": 1,
       "points": 3
     },
