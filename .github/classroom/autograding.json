@@ -135,7 +135,7 @@
       "setup": "",
       "run": "node --experimental-modules --input-type=module --eval \"import {moreStats} from './src/medium/medium_2.js'; console.log(moreStats.avgMpgByYearAndHybrid);\"",
       "input": "",
-      "output": "{\r\n  avgMpg: { city: 17.275807722616232, highway: 24.125492513790388 },\r\n  allYearStats: {\r\n    length: 5076,\r\n    sum: 10207164,\r\n    mean: 2010.8676122931442,\r\n    median: 2011,\r\n    min: 2009,\r\n    max: 2012,\r\n    variance: 0.6128911467677238,\r\n    standard_deviation: 0.7828736467449418\r\n  },\r\n  ratioHybrids: 0.012411347517730497\r\n}",
+      "output": "{\r\n  '2009': {\r\n    hybrid: { city: 20.5, highway: 21 },\r\n    notHybrid: { city: 17.622222222222224, highway: 24.6 }\r\n  },\r\n  '2010': {\r\n    hybrid: { city: 21.055555555555557, highway: 22.72222222222222 },\r\n    notHybrid: { city: 16.970073404856013, highway: 23.619424054206664 }\r\n  },\r\n  '2011': {\r\n    hybrid: { city: 21.692307692307693, highway: 33.23076923076923 },\r\n    notHybrid: { city: 16.8292438657987, highway: 23.479218828242363 }\r\n  },\r\n  '2012': {\r\n    hybrid: { city: 23.066666666666666, highway: 29.066666666666666 },\r\n    notHybrid: { city: 18.221666666666668, highway: 25.7025 }\r\n  }\r\n}",
       "comparison": "exact",
       "timeout": 1,
       "points": 4
