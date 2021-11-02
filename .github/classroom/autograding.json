@@ -55,8 +55,8 @@
       "setup": "",
       "run": "node --experimental-modules --input-type=module --eval \"import {identifyArray} from './src/mild/mild_2.js'; console.log(identifyArray([ 13, 14, 16, 16, 17, 18, 16, 14, 21, 13 ]));\"",
       "input": "",
-      "output": "[ { type: 'number', value: 13 },\r\n  { type: 'number', value: 14 },\r\n  { type: 'number', value: 16 },\r\n  { type: 'number', value: 16 },\r\n  { type: 'number', value: 17 },\r\n  { type: 'number', value: 18 },\r\n  { type: 'number', value: 16 },\r\n  { type: 'number', value: 14 },\r\n  { type: 'number', value: 21 },\r\n  { type: 'number', value: 13 } ]",
-      "comparison": "exact",
+      "output": "{ type: 'number', value: 21 },",
+      "comparison": "included",
       "timeout": 1,
       "points": 3
     },
@@ -73,7 +73,7 @@
     {
       "name": "removeKeyNonDestructive(object, key) from mild_2",
       "setup": "",
-      "run": "node --experimental-modules --input-type=module --eval \"import {removeKeyNonDestructive} from './src/mild/mild_2.js'; let idrecord = { name: 'John Martin', title: 'Instructor', age: 41, password: 'supersecretpassword' }; newrecord = removeKeyNonDestructive(idrecord, 'age'); console.log(idrecord); console.log(newrecord);\"",
+      "run": "node --experimental-modules --input-type=module --eval \"import {removeKeyNonDestructive} from './src/mild/mild_2.js'; let idrecord = { name: 'John Martin', title: 'Instructor', age: 41, password: 'supersecretpassword' }; let newrecord = removeKeyNonDestructive(idrecord, 'age'); console.log(idrecord); console.log(newrecord);\"",
       "input": "",
       "output": "{ name: 'John Martin',\r\n  title: 'Instructor',\r\n  age: 41,\r\n  password: 'supersecretpassword' }\r\n{ name: 'John Martin',\r\n  title: 'Instructor',\r\n  password: 'supersecretpassword' }",
       "comparison": "exact",
@@ -83,7 +83,7 @@
     {
       "name": "removeKeys(object, keyList) from mild_2",
       "setup": "",
-      "run": "node --experimental-modules --input-type=module --eval \"import {removeKeys} from './src/mild/mild_2.js'; let idrecord = { name: 'John Martin', title: 'Instructor', age: 41, password: 'supersecretpassword' }; newrecord = removeKeys(idrecord, [ 'age', 'password' ]); console.log(idrecord); console.log(newrecord);\"",
+      "run": "node --experimental-modules --input-type=module --eval \"import {removeKeys} from './src/mild/mild_2.js'; let idrecord = { name: 'John Martin', title: 'Instructor', age: 41, password: 'supersecretpassword' }; let newrecord = removeKeys(idrecord, [ 'age', 'password' ]); console.log(idrecord); console.log(newrecord);\"",
       "input": "",
       "output": "{ name: 'John Martin',\r\n  title: 'Instructor',\r\n  age: 41,\r\n  password: 'supersecretpassword' }\r\n{ name: 'John Martin', title: 'Instructor' }",
       "comparison": "exact",
@@ -173,10 +173,10 @@
     {
       "name": "searchByYear(car_data, years) from medium_3",
       "setup": "",
-      "run": "node --experimental-modules --input-type=module --eval \"import car_data from './src/medium/data/mpg_data.js'; import {searchByYear} from './src/medium/medium_3.js'; console.log(searchByYear(car_data, [ 2010, 2012 ]));\"",
+      "run": "node --experimental-modules --input-type=module --eval \"import car_data from './src/medium/data/mpg_data.js'; import {searchByYear} from './src/medium/medium_3.js'; console.log(searchByYear(car_data, [ 2016, 2018 ]));\"",
       "input": "",
-      "output": "  {\r\n    city_mpg: 19,\r\n    classification: 'Manual transmission',\r\n    driveline: 'Rear-wheel drive',\r\n    engine_type: 'Ford 3.7L 6 Cylinder 305 hp 280 ft-lbs',\r\n    fuel_type: 'Gasoline',\r\n    height: 137,\r\n    highway_mpg: 29,\r\n    horsepower: 305,\r\n    hybrid: false,\r\n    id: '2012 Ford Mustang V6',\r\n    length: 169,\r\n    make: 'Ford',\r\n    model_year: '2012 Ford Mustang Coup',\r\n    number_of_forward_gears: 6,\r\n    torque: 280,\r\n    transmission: '6 Speed Manual',\r\n    width: 85,\r\n    year: 2012\r\n  },",
-      "comparison": "included",
+      "output": "[]",
+      "comparison": "exact",
       "timeout": 1,
       "points": 3
     },
