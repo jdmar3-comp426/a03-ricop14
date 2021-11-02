@@ -297,7 +297,17 @@
       "input": "",
       "output": "",
       "comparison": "included",
-      "timeout": 10,
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Thank you",
+      "setup": "",
+      "run": "echo \"Thank you to Peter Hankyu Wi (@peter-h-wi) for debugging the test scripts.\"",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
       "points": null
     }
   ]
