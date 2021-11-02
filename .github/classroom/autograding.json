@@ -7,7 +7,7 @@
       "input": "",
       "output": "13 + 7 = 20",
       "comparison": "exact",
-      "timeout": 10,
+      "timeout": 1,
       "points": 3
     },
     {
@@ -17,7 +17,7 @@
       "input": "",
       "output": "[\r\n  13, 14, 15, 16, 17,\r\n  18, 19, 20, 21, 22\r\n]",
       "comparison": "exact",
-      "timeout": 10,
+      "timeout": 1,
       "points": 3
     },
     {
@@ -27,7 +27,7 @@
       "input": "",
       "output": "{ max: 9, min: 1 }",
       "comparison": "exact",
-      "timeout": 10,
+      "timeout": 1,
       "points": 3
     },
     {
@@ -37,7 +37,7 @@
       "input": "",
       "output": "{ '13': 2, '14': 2, '16': 3, '17': 1, '18': 1, '21': 1 }",
       "comparison": "exact",
-      "timeout": 10,
+      "timeout": 1,
       "points": 3
     },
     {
@@ -47,7 +47,7 @@
       "input": "",
       "output": "{ type: 'string', value: 'purple' }",
       "comparison": "included",
-      "timeout": 10,
+      "timeout": 1,
       "points": 3
     },
     {
@@ -57,7 +57,7 @@
       "input": "",
       "output": "[ { type: 'number', value: 13 },\r\n  { type: 'number', value: 14 },\r\n  { type: 'number', value: 16 },\r\n  { type: 'number', value: 16 },\r\n  { type: 'number', value: 17 },\r\n  { type: 'number', value: 18 },\r\n  { type: 'number', value: 16 },\r\n  { type: 'number', value: 14 },\r\n  { type: 'number', value: 21 },\r\n  { type: 'number', value: 13 } ]",
       "comparison": "exact",
-      "timeout": 10,
+      "timeout": 1,
       "points": 3
     },
     {
@@ -67,7 +67,7 @@
       "input": "",
       "output": "{ name: 'John Martin', title: 'Instructor', age: 41 }",
       "comparison": "exact",
-      "timeout": 10,
+      "timeout": 1,
       "points": 3
     },
     {
@@ -77,7 +77,7 @@
       "input": "",
       "output": "{ name: 'John Martin',\r\n  title: 'Instructor',\r\n  age: 41,\r\n  password: 'supersecretpassword' }\r\n{ name: 'John Martin',\r\n  title: 'Instructor',\r\n  password: 'supersecretpassword' }",
       "comparison": "exact",
-      "timeout": 10,
+      "timeout": 1,
       "points": 3
     },
     {
@@ -87,7 +87,7 @@
       "input": "",
       "output": "{ name: 'John Martin',\r\n  title: 'Instructor',\r\n  age: 41,\r\n  password: 'supersecretpassword' }\r\n{ name: 'John Martin', title: 'Instructor' }",
       "comparison": "exact",
-      "timeout": 10,
+      "timeout": 1,
       "points": 3
     },
     {
@@ -97,7 +97,7 @@
       "input": "",
       "output": "119",
       "comparison": "exact",
-      "timeout": 10,
+      "timeout": 1,
       "points": 3
     },
     {
@@ -107,7 +107,7 @@
       "input": "",
       "output": "7",
       "comparison": "exact",
-      "timeout": 10,
+      "timeout": 1,
       "points": 3
     },
     {
@@ -117,7 +117,7 @@
       "input": "",
       "output": "{ length: 12,\r\n  sum: 119,\r\n  mean: 9.916666666666666,\r\n  median: 7,\r\n  min: 2,\r\n  max: 47,\r\n  variance: 133.74305555555557,\r\n  standard_deviation: 11.564733267808453 }",
       "comparison": "exact",
-      "timeout": 10,
+      "timeout": 1,
       "points": 3
     },
     {
@@ -127,7 +127,7 @@
       "input": "",
       "output": "{ avgMpg: { city: 17.275807722616232, highway: 24.125492513790388 },\r\n  allYearStats:\r\n   { length: 5076,\r\n     sum: 10207164,\r\n     mean: 2010.8676122931442,\r\n     median: 2011,\r\n     min: 2009,\r\n     max: 2012,\r\n     variance: 0.6128911467677238,\r\n     standard_deviation: 0.7828736467449418 },\r\n  ratioHybrids: 0.012411347517730497 }",
       "comparison": "exact",
-      "timeout": 10,
+      "timeout": 1,
       "points": 4
     },
     {
@@ -137,7 +137,7 @@
       "input": "",
       "output": "{ '2009':\r\n   { hybrid: { city: 20.5, highway: 21 },\r\n     notHybrid: { city: 17.622222222222224, highway: 24.6 } },\r\n  '2010':\r\n   { hybrid: { city: 21.055555555555557, highway: 22.72222222222222 },\r\n     notHybrid: { city: 16.970073404856013, highway: 23.619424054206664 } },\r\n  '2011':\r\n   { hybrid: { city: 21.692307692307693, highway: 33.23076923076923 },\r\n     notHybrid: { city: 16.8292438657987, highway: 23.479218828242363 } },\r\n  '2012':\r\n   { hybrid: { city: 23.066666666666666, highway: 29.066666666666666 },\r\n     notHybrid: { city: 18.221666666666668, highway: 25.7025 } } }",
       "comparison": "exact",
-      "timeout": 10,
+      "timeout": 1,
       "points": 4
     },
     {
@@ -147,7 +147,7 @@
       "input": "",
       "output": "[\r\n  {\r\n    city_mpg: 10,\r\n    classification: 'Automatic transmission',\r\n    driveline: 'Rear-wheel drive',\r\n    engine_type: 'Maybach 6.0L 12 Cylinder 631 hp 738 ft-lbs Turbo',\r\n    fuel_type: 'Gasoline',\r\n    height: 38,\r\n    highway_mpg: 16,\r\n    horsepower: 631,\r\n    hybrid: false,\r\n    id: '2010 Maybach 57 Zeppelin',\r\n    length: 95,\r\n    make: 'Maybach',\r\n    model_year: '2010 Maybach 57',\r\n    number_of_forward_gears: 5,\r\n    torque: 738,\r\n    transmission: '5 Speed Automatic Select Shift',\r\n    width: 189,\r\n    year: 2010\r\n  },\r\n  {\r\n    city_mpg: 10,\r\n    classification: 'Automatic transmission',\r\n    driveline: 'Rear-wheel drive',\r\n    engine_type: 'Maybach 6.0L 12 Cylinder 631 hp 738 ft-lbs Turbo',\r\n    fuel_type: 'Gasoline',\r\n    height: 38,\r\n    highway_mpg: 16,\r\n    horsepower: 631,\r\n    hybrid: false,\r\n    id: '2010 Maybach 57 Zeppelin',\r\n    length: 95,\r\n    make: 'Maybach',\r\n    model_year: '2010 Maybach 57',\r\n    number_of_forward_gears: 5,\r\n    torque: 738,\r\n    transmission: '5 Speed Automatic Select Shift',\r\n    width: 189,\r\n    year: 2011\r\n  },\r\n  {\r\n    city_mpg: 10,\r\n    classification: 'Automatic transmission',\r\n    driveline: 'Rear-wheel drive',\r\n    engine_type: 'Maybach 6.0L 12 Cylinder 631 hp 738 ft-lbs Turbo',\r\n    fuel_type: 'Gasoline',\r\n    height: 38,\r\n    highway_mpg: 16,\r\n    horsepower: 631,\r\n    hybrid: false,\r\n    id: '2010 Maybach 62 Zeppelin',\r\n    length: 20,\r\n    make: 'Maybach',\r\n    model_year: '2010 Maybach 62',\r\n    number_of_forward_gears: 5,\r\n    torque: 738,\r\n    transmission: '5 Speed Automatic Select Shift',\r\n    width: 189,\r\n    year: 2010\r\n  }\r\n]",
       "comparison": "exact",
-      "timeout": 10,
+      "timeout": 1,
       "points": 3
     },
     {
@@ -157,7 +157,7 @@
       "input": "",
       "output": "[\r\n  {\r\n    city_mpg: 36,\r\n    classification: 'Automatic transmission',\r\n    driveline: 'Front-wheel drive',\r\n    engine_type: 'Kia 2.4L 4 Cylinder 166 hp 154 ft-lbs Hybrid',\r\n    fuel_type: 'Gasoline',\r\n    height: 170,\r\n    highway_mpg: 40,\r\n    horsepower: 166,\r\n    hybrid: true,\r\n    id: '2011 Kia Optima Hybrid',\r\n    length: 235,\r\n    make: 'Kia',\r\n    model_year: '2011 Kia Optima Hybrid',\r\n    number_of_forward_gears: 6,\r\n    torque: 154,\r\n    transmission: '6 Speed Automatic Select Shift',\r\n    width: 39,\r\n    year: 2011\r\n  },\r\n  {\r\n    city_mpg: 35,\r\n    classification: 'Automatic transmission',\r\n    driveline: 'Front-wheel drive',\r\n    engine_type: 'Hyundai 2.4L 4 Cylinder 166 hp 154 ft-lbs Hybrid',\r\n    fuel_type: 'Gasoline',\r\n    height: 185,\r\n    highway_mpg: 40,\r\n    horsepower: 166,\r\n    hybrid: true,\r\n    id: '2011 Hyundai Sonata Hybrid',\r\n    length: 212,\r\n    make: 'Hyundai',\r\n    model_year: '2011 Hyundai Sonata Hybrid',\r\n    number_of_forward_gears: 6,\r\n    torque: 154,\r\n    transmission: '6 Speed Automatic Select Shift',\r\n    width: 41,\r\n    year: 2011\r\n  }\r\n]",
       "comparison": "exact",
-      "timeout": 10,
+      "timeout": 1,
       "points": 3
     },
     {
@@ -167,7 +167,7 @@
       "input": "",
       "output": "  {\r\n    city_mpg: 21,\r\n    classification: 'Manual transmission',\r\n    driveline: 'Front-wheel drive',\r\n    engine_type: 'Kia 2.4L 4 Cylinder 176 hp 168 ft-lbs',\r\n    fuel_type: 'Gasoline',\r\n    height: 99,\r\n    highway_mpg: 29,\r\n    horsepower: 176,\r\n    hybrid: false,\r\n    id: '2012 Kia Sportage',\r\n    length: 87,\r\n    make: 'Kia',\r\n    model_year: '2012 Kia Sportage',\r\n    number_of_forward_gears: 6,\r\n    torque: 168,\r\n    transmission: '6 Speed Manual',\r\n    width: 62,\r\n    year: 2012\r\n  },",
       "comparison": "included",
-      "timeout": 10,
+      "timeout": 1,
       "points": 3
     },
     {
@@ -177,75 +177,65 @@
       "input": "",
       "output": "  {\r\n    city_mpg: 19,\r\n    classification: 'Manual transmission',\r\n    driveline: 'Rear-wheel drive',\r\n    engine_type: 'Ford 3.7L 6 Cylinder 305 hp 280 ft-lbs',\r\n    fuel_type: 'Gasoline',\r\n    height: 137,\r\n    highway_mpg: 29,\r\n    horsepower: 305,\r\n    hybrid: false,\r\n    id: '2012 Ford Mustang V6',\r\n    length: 169,\r\n    make: 'Ford',\r\n    model_year: '2012 Ford Mustang Coup',\r\n    number_of_forward_gears: 6,\r\n    torque: 280,\r\n    transmission: '6 Speed Manual',\r\n    width: 85,\r\n    year: 2012\r\n  },",
       "comparison": "included",
-      "timeout": 10,
+      "timeout": 1,
       "points": 3
     },
     {
       "name": "repeat from spicy_9",
       "setup": "",
-      "run": "clear",
+      "run": "node --experimental-modules --input-type=module --eval \"import {repeat} from './src/spicy/spicy_9.js'; repeat(console.log, 5, 'What up?');\"",
       "input": "",
-      "output": "F",
-      "comparison": "included",
-      "timeout": 10,
+      "output": "What up?\r\nWhat up?\r\nWhat up?\r\nWhat up?\r\nWhat up?",
+      "comparison": "exact",
+      "timeout": 1,
       "points": 4
     },
     {
       "name": "repeatDemo from spicy_9",
       "setup": "",
-      "run": "clear",
+      "run": "node --experimental-modules --input-type=module --eval \"import {repeatDemo} from './src/spicy/spicy_9.js'; repeatDemo();\"",
       "input": "",
-      "output": "F",
+      "output": "Hello, world!\r\nHello, world!\r\nHello, world!\r\nHello, world!\r\nHello, world!\r\nHello, world!\r\nHello, world!\r\nHello, world!\r\nHello, world!\r\nHello, world!",
       "comparison": "exact",
-      "timeout": 10,
+      "timeout": 1,
       "points": 4
     },
     {
       "name": "multiplyBy from spicy_9",
       "setup": "",
-      "run": "clear",
+      "run": "node --experimental-modules --input-type=module --eval \"import {multiplyBy} from './src/spicy/spicy_9.js'; console.log(multiplyBy(3)(5));\"",
       "input": "",
-      "output": "F",
+      "output": "15",
       "comparison": "exact",
-      "timeout": 10,
-      "points": 4
-    },
-    {
-      "name": "multiplyBy from spicy_9",
-      "setup": "",
-      "run": "clear",
-      "input": "",
-      "output": "F",
-      "comparison": "exact",
-      "timeout": 10,
+      "timeout": 1,
       "points": 4
     },
     {
       "name": " tenTimes from spicy_9",
       "setup": "",
-      "run": "clear",
+      "run": "node --experimental-modules --input-type=module --eval \"import {tenTimes} from './src/spicy/spicy_9.js'; console.log(tenTimes(37));\"",
       "input": "",
-      "output": "F",
+      "output": "370",
       "comparison": "exact",
-      "timeout": 10,
+      "timeout": 1,
       "points": 4
     },
     {
       "name": "tenTimesFifty from spicy_9",
       "setup": "",
-      "run": "clear",
+      "run": "node --experimental-modules --input-type=module --eval \"import {tenTimesFifty} from './src/spicy/spicy_9.js'; console.log(tenTimesFifty());\"",
       "input": "",
-      "output": "F",
+      "output": "500",
       "comparison": "exact",
-      "timeout": 10,
+      "timeout": 1,
       "points": 4
     },
     {
       "name": "everyEven from spicy_9",
       "setup": "",
-      "run": "clear",
+      "run": "node --experimental-modules --input-type=module --eval \"import {everyEven} from './src/spicy/spicy_9.js'; console.log(everyEven([7, 1, 7, 1, 7, 1, 7], x => x === 7));\"",
       "input": "",
-      "output": "F",
+      "output": "true",
       "comparison": "exact",
       "timeout": 10,
       "points": 4
@@ -253,51 +243,51 @@
     {
       "name": "someEven from spicy_9",
       "setup": "",
-      "run": "clear",
+      "run": "node --experimental-modules --input-type=module --eval \"import {someEven} from './src/spicy/spicy_9.js'; console.log(someEven([5, 7, 1, 7, 1, 7, 1, 7], x => x === 7));\"",
       "input": "",
-      "output": "F",
+      "output": "false",
       "comparison": "exact",
-      "timeout": 10,
+      "timeout": 1,
       "points": 4
     },
     {
       "name": "filter from spicy_9",
       "setup": "",
-      "run": "clear",
+      "run": "node --experimental-modules --input-type=module --eval \"import {filter} from './src/spicy/spicy_9.js'; console.log(filter(['spectacle', 'pretend', 'orange', 'melt'], x => x[2] === 'e'));\"",
       "input": "",
-      "output": "F",
+      "output": "{ pass: [ 'spectacle', 'pretend' ], fail: [ 'orange', 'melt' ] }",
       "comparison": "exact",
-      "timeout": 10,
+      "timeout": 1,
       "points": 4
     },
     {
       "name": "allEvensAreOdd from spicy_9",
       "setup": "",
-      "run": "clear",
+      "run": "node --experimental-modules --input-type=module --eval \"import {allEvensAreOdd} from './src/spicy/spicy_9.js'; console.log(allEvensAreOdd([4, 5, 6, 7, 8, 9, 7]));\"",
       "input": "",
-      "output": "F",
+      "output": "false",
       "comparison": "exact",
-      "timeout": 10,
+      "timeout": 1,
       "points": 4
     },
     {
       "name": "anEvenIsOdd from spicy_9",
       "setup": "",
-      "run": "clear",
+      "run": "node --experimental-modules --input-type=module --eval \"import {anEvenIsOdd} from './src/spicy/spicy_9.js'; console.log(anEvenIsOdd([4, 5, 6, 7, 8, 9, 7]));\"",
       "input": "",
-      "output": "F",
+      "output": "true",
       "comparison": "exact",
-      "timeout": 10,
+      "timeout": 1,
       "points": 4
     },
     {
       "name": "hasExactly from spicy_9",
       "setup": "",
-      "run": "clear",
+      "run": "node --experimental-modules --input-type=module --eval \"import {hasExactly} from './src/spicy/spicy_9.js'; console.log(hasExactly([4, 5, 6, 7, 8, 9, 7], x => x === 7, 2));\"",
       "input": "",
-      "output": "F",
+      "output": "true",
       "comparison": "exact",
-      "timeout": 10,
+      "timeout": 1,
       "points": 4
     },
     {
