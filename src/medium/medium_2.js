@@ -21,16 +21,31 @@ see under the methods section
  */
 export const allCarStats = {
     avgMpg: getAvgMpg(mpg_data),
-    allYearStats: undefined,
-    ratioHybrids: undefined,
+    allYearStats: getAllYearStats(mpg_data),
+    ratioHybrids: getHybridRatio(mpg_data),
 };
 
 function getAvgMpg(array) {
-    let sum = 0;
+    let citySum = 0;
+    let highwaySum = 0;
     for(let i = 0; i < array.length; i++) {
-        sum += array[i]["city_mpg"] + array[i]["highway_mpg"];
+        citySum += array[i]["city_mpg"];
+        highwaySum += array[i]["highway_mpg"];
     }
-    return sum/(array.length*2);
+    return {'city':citySum/array.length, 'highway':highwaySum/array.length};
+}
+
+function getAllYearStats(mpg_data) {
+    let allYears = [];
+    for(let i = 0; i < array.length; i++) {
+        allYears.push(array[i]["year"]);
+    }
+    return getStatistics(allYears);
+}
+
+function getHybridRatio(array) {
+    let hybridCars = array.filter(car => car.year === true);
+    return hybridCars.length/array.length;
 }
 
 /**
