@@ -35,7 +35,7 @@ function getAvgMpg(array) {
     return {'city':citySum/array.length, 'highway':highwaySum/array.length};
 }
 
-function getAllYearStats(mpg_data) {
+function getAllYearStats(array) {
     let allYears = [];
     for(let i = 0; i < array.length; i++) {
         allYears.push(array[i]["year"]);
