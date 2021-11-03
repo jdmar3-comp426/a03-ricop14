@@ -55,9 +55,13 @@ export function maxAndMin(numbers) {
  *
  */
 export function countArray(array) {
-    let sorted = Array.prototype.sort(array);
-    let counts = [];
-    for(const elem in array) {
-        
+    let toReturn = {};
+    for(let i = 0; i < array.length; i++) {
+        if(toReturn[array[i]]) {
+            toReturn[array[i]]++;
+        } else {
+            toReturn[array[i]] = 1;
+        }
     }
+    return toReturn;
 }
