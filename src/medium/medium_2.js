@@ -44,7 +44,7 @@ function getAllYearStats(array) {
 }
 
 function getHybridRatio(array) {
-    let hybridCars = array.filter(car => car.year === true);
+    let hybridCars = array.filter(car => car.year == true);
     return hybridCars.length/array.length;
 }
 
