@@ -47,7 +47,8 @@ export function identifyArray(array) {
  obj now does not contain the `password` field
  */
 export function removeKey(object, key) {
-   delete object.key;
+   let parameter = key;
+   delete object.parameter;
 }
 
 /**
@@ -95,7 +96,8 @@ export function removeKeyNonDestructive(object, key) {
 export function removeKeys(object, keyList) {
    var clone = {...object};
    for(let i = 0; i < keyList.length; i++) {
-      delete clone.keyList[i];
+      let toDelete = keyList[i];
+      delete clone.toDelete;
    }
    return clone;
 }
