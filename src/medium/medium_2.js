@@ -106,6 +106,27 @@ function getHybridRatio(array) {
  * }
  */
 export const moreStats = {
-    makerHybrids: undefined,
+    makerHybrids: getHybridsByMaker(mpg_data),
     avgMpgByYearAndHybrid: undefined
 };
+
+function getHybridsByMaker(array) {
+    const hybridCars = array.filter(car => car.hybrid == "true");
+    let makeArray = [{
+        "make": hybridCars[0].make,
+        "hybrids":[hybridCars[0].id]
+    }];
+    for(let i = 1; i < hybridCars.length; i++) {
+        for(let j = 0; j < makeArray.length; j++) {
+            if(makeArray[j].make == hybridCars[i].make) {
+                makeArray[j].hybrids.push(hybridCars[i].id);
+                break;
+            }
+            makeArray.push({
+                "make":hybridCars[i].make,
+                "hybrids":hybridCars[i].id
+            });
+        }
+    }
+    return makeArray;
+}
