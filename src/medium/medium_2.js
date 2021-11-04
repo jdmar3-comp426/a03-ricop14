@@ -119,7 +119,7 @@ function getHybridsByMaker(array) {
     for(let i = 1; i < hybridCars.length; i++) {
         for(let j = 0; j < makeArray.length; j++) {
             if(makeArray[j].make == hybridCars[i]["make"]) {
-                makeArray[j].hybrids.push(hybridCars[i]["id"];
+                makeArray[j].hybrids.push(hybridCars[i]["id"]);
                 break;
             }
             makeArray.push({
