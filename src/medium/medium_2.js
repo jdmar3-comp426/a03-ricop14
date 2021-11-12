@@ -107,7 +107,7 @@ function getHybridRatio(array) {
  */
 export const moreStats = {
     makerHybrids: getHybridsByMaker(mpg_data),
-    avgMpgByYearAndHybrid: undefined
+    avgMpgByYearAndHybrid: getMPGByYear(mpg_data),
 };
 
 function getHybridsByMaker(array) {
