@@ -77,5 +77,10 @@ export function searchName(car_data, searchTerm) {
  * @returns {[]} an array of car objects
  */
 export function searchByYear(car_data, years) {
-
+    let filteredCars = car_data.filter(car => years.includes(car.year));
+    filteredCars.sort(function(a, b) {
+        if(a.year > b.year) {return -1};
+        if(a.year < b.year) {return 1};
+        return 0;
+    })
 }
