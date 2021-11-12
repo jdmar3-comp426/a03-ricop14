@@ -111,22 +111,47 @@ export const moreStats = {
 };
 
 function getHybridsByMaker(array) {
-    const hybridCars = array.filter(car => car.hybrid == "true");
-    let makeArray = [{
-        "make": hybridCars[0]["make"],
-        "hybrids":[hybridCars[0]["id"]]
-    }];
-    for(let i = 1; i < hybridCars.length; i++) {
-        for(let j = 0; j < makeArray.length; j++) {
-            if(makeArray[j].make == hybridCars[i]["make"]) {
-                makeArray[j].hybrids.push(hybridCars[i]["id"]);
-                break;
+    let initialArray = [];
+    var hybrids = array.reduce(
+        function(previous, current) {
+            if(current.hybrid === true) {
+                var index = previous.map(c => c.make).indexOf(current.make);
+                if(index != -1) {
+                    previous[index].hybrids.push(current.id);
+                } else {
+                    previous.push({"make":current.make,"hybrids":[current.id]});
+                }
             }
-            makeArray.push({
-                "make":hybridCars[i]["make"],
-                "hybrids":hybridCars[i]["id"]
-            });
-        }
-    }
-    return makeArray;
+            return previous;
+        }, initialArray
+    );
+    hybrids.sort(function(a, b) {
+        if(a.hybrids.length > b.hybrids.length) {return -1;}
+        if(a.hybrids.length < b.hybrids.length) {return 1;}
+        return 0;
+    });
+    return hybrids;
+}
+
+function getMPGByYear(array) {
+    let initialObject = {};
+    var cars = array.reduce(
+        function(previous, current) {
+            if(!(current.year in previous)) {
+                previous[current.year] = {
+                    "hybrids":[],
+                    "nonHybrids":[]
+                }
+            }
+            if(current.hybrid === true) {
+                previous[current.year].hybrids.push(current);
+            } else {
+                previous[current.year].nonHybrids.push(current);
+            }
+            return previous;
+        }, initialObject
+    );
+    Object.keys(cars).forEach(c => cars[c].hybrids = getAvgMpg(cars[c].hybrids));
+    Object.keys(cars).forEach(c => cars[c].nonHybrids = getAvgMpg(cars[c].nonHybrids));
+    return cars;
 }
