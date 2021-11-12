@@ -139,19 +139,19 @@ function getMPGByYear(array) {
         function(previous, current) {
             if(!(current.year in previous)) {
                 previous[current.year] = {
-                    "hybrids":[],
-                    "nonHybrids":[]
+                    "hybrid":[],
+                    "notHybrid":[]
                 }
             }
             if(current.hybrid === true) {
-                previous[current.year].hybrids.push(current);
+                previous[current.year].hybrid.push(current);
             } else {
-                previous[current.year].nonHybrids.push(current);
+                previous[current.year].notHybrid.push(current);
             }
             return previous;
         }, initialObject
     );
-    Object.keys(cars).forEach(c => cars[c].hybrids = getAvgMpg(cars[c].hybrids));
-    Object.keys(cars).forEach(c => cars[c].nonHybrids = getAvgMpg(cars[c].nonHybrids));
+    Object.keys(cars).forEach(c => cars[c].hybrid = getAvgMpg(cars[c].hybrid));
+    Object.keys(cars).forEach(c => cars[c].notHybrid = getAvgMpg(cars[c].notHybrid));
     return cars;
 }
