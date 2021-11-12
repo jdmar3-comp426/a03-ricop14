@@ -58,7 +58,13 @@ export function searchMpg(car_data, minCity, minHighway) {
  * @returns {[]} array of cars
  */
 export function searchName(car_data, searchTerm) {
-
+    let filteredCars = car_data.filter(car => car.id.toUpperCase().includes(searchTerm.toUpperCase()));
+    filteredCars.sort(function(a, b) {
+        if(a.id.toUpperCase().indexOf(searchTerm.toUpperCase()) > b.id.toUpperCase().indexOf(searchTerm.toUpperCase())) {return 1};
+        if(a.id.toUpperCase().indexOf(searchTerm.toUpperCase()) < b.id.toUpperCase().indexOf(searchTerm.toUpperCase())) {return -1};
+        return 0;
+    });
+    return filteredCars;
 }
 
 
