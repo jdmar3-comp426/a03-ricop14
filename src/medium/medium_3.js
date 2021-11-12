@@ -83,4 +83,5 @@ export function searchByYear(car_data, years) {
         if(a.year < b.year) {return 1};
         return 0;
     })
+    return filteredCars;
 }
