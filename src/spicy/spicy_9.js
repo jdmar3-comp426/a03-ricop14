@@ -152,9 +152,9 @@ export const filter = (arr, test) => {
     let toReturn = {'fail':[], 'pass':[]};
     for(let i = 0; i < arr.length; i++) {
         if(test(arr[i])) {
-            toReturn[pass].push(arr[i]);
+            toReturn.pass.push(arr[i]);
         } else {
-            toReturn[fail].push(arr[i]);
+            toReturn.fail.push(arr[i]);
         }
     }
     return toReturn;
