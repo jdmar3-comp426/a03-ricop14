@@ -115,7 +115,7 @@
       "setup": "",
       "run": "node --experimental-modules --input-type=module --eval \"import {getStatistics} from './src/medium/medium_1.js'; console.log(getStatistics([14,8,5,7,7,5,2,7,5,3,47,9]));\"",
       "input": "",
-      "output": ".*\\s.*12.*\\s.*119.*\\s.*9\\.91666.*\\s.*7.*\\s.*2.*\\s.*47.*\\s.*133\\.74305.*\\s.*11\\.56473.*\\s.*",
+      "output": ".*\\s*.*12.*\\s*.*119.*\\s*.*9\\.91666.*\\s*.*7.*\\s*.*2.*\\s*.*47.*\\s*.*133\\.74305.*\\s*.*11\\.56473.*\\s*.*",
       "comparison": "regex",
       "timeout": 1,
       "points": 3
@@ -125,7 +125,7 @@
       "setup": "",
       "run": "node --experimental-modules --input-type=module --eval \"import {allCarStats} from './src/medium/medium_2.js'; console.log(allCarStats);\"",
       "input": "",
-      "output": ".*\\s.*17.27580.*24\\.12549.*$\\s.*\\s.*5076.*\\s.*10207164.*\\s.*2010\\.86761.*\\s.*2011.*\\s.*2009.*\\s.*2012.*\\s.*0\\.61289.*\\s.*0\\.78287.*\\s.*\\s.*0\\.01241.*\\s.*",
+      "output": ".*\\s*.*17.27580.*24\\.12549.*$\\s*.*\\s*.*5076.*\\s*.*10207164.*\\s*.*2010\\.86761.*\\s*.*2011.*\\s*.*2009.*\\s*.*2012.*\\s*.*0\\.61289.*\\s*.*0\\.78287.*\\s*.*\\s*.*0\\.01241.*\\s*.*",
       "comparison": "regex",
       "timeout": 1,
       "points": 4
