@@ -25,8 +25,8 @@
       "setup": "",
       "run": "node --experimental-modules --input-type=module --eval \"import {maxAndMin} from './src/mild/mild_1.js'; console.log(maxAndMin('41847923'));\"",
       "input": "",
-      "output": "{ max: 9, min: 1 }",
-      "comparison": "exact",
+      "output": ".*(max.*9.*min.*1|min.*1.*max.*9).*",
+      "comparison": "regex",
       "timeout": 1,
       "points": 3
     },
@@ -115,8 +115,8 @@
       "setup": "",
       "run": "node --experimental-modules --input-type=module --eval \"import {getStatistics} from './src/medium/medium_1.js'; console.log(getStatistics([14,8,5,7,7,5,2,7,5,3,47,9]));\"",
       "input": "",
-      "output": "{\r\n  length: 12,\r\n  sum: 119,\r\n  mean: 9.916666666666666,\r\n  median: 7,\r\n  min: 2,\r\n  max: 47,\r\n  variance: 133.74305555555557,\r\n  standard_deviation: 11.564733267808453\r\n}",
-      "comparison": "exact",
+      "output": ".*\\s.*12.*\\s.*119.*\\s.*9\\.91666.*\\s.*7.*\\s.*2.*\\s.*47.*\\s.*133\\.74305.*\\s.*11\\.56473.*\\s.*",
+      "comparison": "regex",
       "timeout": 1,
       "points": 3
     },
@@ -125,8 +125,8 @@
       "setup": "",
       "run": "node --experimental-modules --input-type=module --eval \"import {allCarStats} from './src/medium/medium_2.js'; console.log(allCarStats);\"",
       "input": "",
-      "output": "{\r\n  avgMpg: { city: 17.275807722616232, highway: 24.125492513790388 },\r\n  allYearStats: {\r\n    length: 5076,\r\n    sum: 10207164,\r\n    mean: 2010.8676122931442,\r\n    median: 2011,\r\n    min: 2009,\r\n    max: 2012,\r\n    variance: 0.6128911467677238,\r\n    standard_deviation: 0.7828736467449418\r\n  },\r\n  ratioHybrids: 0.012411347517730497\r\n}",
-      "comparison": "exact",
+      "output": ".*\\s.*17.27580.*24\\.12549.*$\\s.*\\s.*5076.*\\s.*10207164.*\\s.*2010\\.86761.*\\s.*2011.*\\s.*2009.*\\s.*2012.*\\s.*0\\.61289.*\\s.*0\\.78287.*\\s.*\\s.*0\\.01241.*\\s.*",
+      "comparison": "regex",
       "timeout": 1,
       "points": 4
     },
